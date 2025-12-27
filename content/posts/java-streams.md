@@ -1,6 +1,7 @@
 ---
 title: "Java Streams API - Lập trình hàm"
 date: 2024-12-18
+draft: false
 tags: ["Java", "Streams", "Functional Programming"]
 categories: ["Java"]
 featured_image: "/images/anh5.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "DOM Manipulation với JavaScript"
 date: 2024-12-15
+draft: false
 tags: ["JavaScript", "DOM", "Frontend"]
 categories: ["JavaScript"]
 featured_image: "/images/anh7.jpg"

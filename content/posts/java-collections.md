@@ -1,6 +1,7 @@
 ---
 title: "Java Collections Framework"
 date: 2024-12-19
+draft: false
 tags: ["Java", "Collections", "API"]
 categories: ["Java"]
 featured_image: "/images/anh2.jpg"

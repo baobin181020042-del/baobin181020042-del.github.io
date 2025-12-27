@@ -1,6 +1,7 @@
 ---
 title: "ES6 - JavaScript Modern"
 date: 2024-12-17
+draft: false
 tags: ["JavaScript", "ES6", "Frontend"]
 categories: ["JavaScript"]
 featured_image: "/images/anh8.jpg"

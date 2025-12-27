@@ -1,6 +1,7 @@
 ---
 title: "Git - Quản lý phiên bản code"
 date: 2024-12-11
+draft: false
 tags: ["Git", "DevOps", "Tools"]
 categories: ["Tools"]
 featured_image: "/images/anh1.jpg"

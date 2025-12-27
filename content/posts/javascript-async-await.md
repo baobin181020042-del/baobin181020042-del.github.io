@@ -1,6 +1,7 @@
 ---
 title: "JavaScript Async/Await - Xử lý bất đồng bộ"
 date: 2024-12-16
+draft: false
 tags: ["JavaScript", "Async", "Promise"]
 categories: ["JavaScript"]
 featured_image: "/images/anh6.jpg"

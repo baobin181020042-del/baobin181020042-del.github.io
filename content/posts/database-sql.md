@@ -1,6 +1,7 @@
 ---
 title: "SQL - Ngôn ngữ truy vấn cơ sở dữ liệu"
 date: 2024-12-12
+draft: false
 featured_image: "/images/anh11.jpg"
 tags: ["SQL", "Database", "CRUD", "Backend"]
 categories: ["Backend"]

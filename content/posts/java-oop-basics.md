@@ -1,6 +1,7 @@
 ---
 title: "Lập trình hướng đối tượng (OOP) trong Java"
 date: 2024-12-20
+draft: false
 tags: ["Java", "OOP", "Lập trình"]
 categories: ["Java"]
 featured_image: "/images/anh4.jpg"

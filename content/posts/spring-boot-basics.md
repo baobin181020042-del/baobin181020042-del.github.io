@@ -1,6 +1,7 @@
 ---
 title: "Spring Boot - Khởi đầu nhanh"
 date: 2024-12-14
+draft: false
 tags: ["Java", "Spring Boot", "Backend"]
 categories: ["Java"]
 featured_image: "/images/anh10.jpg"
