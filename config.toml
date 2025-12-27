@@ -1,5 +1,5 @@
 # --- 1. CẤU HÌNH CHUNG (PHẢI ĐỂ ĐẦU TIÊN) ---
-baseURL = "https://baobao181004.github.io/"
+baseURL = "https://baobin181020042-del.github.io/"
 languageCode = "vi-VN"
 title = "Phạm Trần Hưng Bảo"
 theme = "hugo-blog-awesome"
