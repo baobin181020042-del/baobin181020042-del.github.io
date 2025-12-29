@@ -1,31 +1,84 @@
 ---
-title: "SQL - Ngôn ngữ truy vấn cơ sở dữ liệu"
-date: 2024-12-12
+title: "Lập trình hướng đối tượng (OOP) trong Java - Từ lý thuyết đến thực chiến"
+date: 2024-12-20
 draft: false
-featured_image: "/images/anh11.jpg"
-tags: ["SQL", "Database", "CRUD", "Backend"]
-categories: ["Backend"]
+tags: ["Java", "OOP", "Lập trình", "Backend"]
+categories: ["Java"]
+featured_image: "/images/anh4.jpg"
+description: "Giải thích chi tiết 4 tính chất của OOP kèm ví dụ minh họa sống động."
 ---
 
-## Giới thiệu
+## 🚀 Giới thiệu
+<div style="background-color: #091823ff; padding: 15px; border-left: 5px solid #2196F3; margin-bottom: 20px; border-radius: 4px;">
+    <strong>💡 Tổng quan:</strong> Lập trình hướng đối tượng (OOP) không chỉ là viết code, mà là <em>tư duy mô hình hóa</em> thế giới thực vào trong máy tính. Đây là kỹ năng bắt buộc phải có nếu bạn muốn trở thành Java Developer.
+</div>
 
-Trong bất kỳ hệ thống phần mềm nào, **Dữ liệu (Data)** luôn là tài sản quý giá nhất. SQL (Structured Query Language) là ngôn ngữ tiêu chuẩn được sử dụng để quản lý và thao tác dữ liệu trong các cơ sở dữ liệu quan hệ (Relational Database). Bằng cách sử dụng SQL, chúng ta có thể thực hiện các thao tác như truy vấn, thêm, sửa, xóa và quản lý cấu trúc của cơ sở dữ liệu.
+Trong Java, mọi thứ đều xoay quanh **Class (Lớp)** và **Object (Đối tượng)**. Hãy cùng đi sâu vào 4 trụ cột chính đã làm nên sức mạnh của ngôn ngữ này.
 
-SQL giúp người lập trình viên có thể tương tác với cơ sở dữ liệu, khai thác và xử lý các khối lượng dữ liệu lớn một cách hiệu quả. Hãy cùng tìm hiểu các lệnh cơ bản nhất trong SQL để thao tác với dữ liệu trong bài viết này.
+---
 
-## 1. Các lệnh thao tác dữ liệu cơ bản (CRUD)
+## 1. Bốn trụ cột của OOP (The 4 Pillars)
 
-CRUD là viết tắt của 4 thao tác cơ bản nhất trong SQL: **C**reate, **R**ead, **U**pdate, **D**elete.
+Để dễ nhớ, chúng ta hãy hình dung OOP giống như việc lắp ráp một chiếc xe hơi:
 
-### CREATE (Tạo mới)
-Lệnh `CREATE` dùng để tạo mới các đối tượng trong cơ sở dữ liệu như bảng (table), chỉ mục (index), hoặc cơ sở dữ liệu.
+### 🛡️ 1. Encapsulation (Tính Đóng gói)
+Đóng gói giống như việc **động cơ xe được che chắn dưới nắp capo**. Người lái xe không cần biết động cơ hoạt động thế nào, chỉ cần biết đạp ga là chạy.
+* **Mục đích:** Che giấu dữ liệu quan trọng, tránh bị thay đổi lung tung từ bên ngoài.
+* **Cách dùng:** Sử dụng từ khóa `private` và cung cấp `Getter/Setter`.
 
-#### **Tạo bảng mới**:
+### 🧬 2. Inheritance (Tính Kế thừa)
+Giống như việc **Xe Thể Thao** kế thừa các đặc điểm của **Xe Ô tô** (có 4 bánh, có vô lăng) nhưng nâng cấp thêm động cơ mạnh hơn.
+* **Mục đích:** Tái sử dụng code, tránh viết lặp lại.
+* **Từ khóa:** `extends`.
 
-```sql
-CREATE TABLE users (
-    id INT PRIMARY KEY,
-    name VARCHAR(100),
-    email VARCHAR(100),
-    age INT
-);
+### 🎭 3. Polymorphism (Tính Đa hình)
+Cùng là hành động "bấm còi", nhưng **xe máy kêu "bíp bíp"**, còn **xe tải kêu "hú còi"**. Cùng một hành động nhưng cách thực hiện khác nhau.
+* **Mục đích:** Linh hoạt trong việc xử lý đối tượng.
+
+### 👻 4. Abstraction (Tính Trừu tượng)
+Bạn chỉ quan tâm đến cái **Vô lăng** (Giao diện) để lái xe, không cần quan tâm trục lái bên trong kết nối ra sao.
+* **Mục đích:** Tập trung vào cái người dùng cần, ẩn đi sự phức tạp.
+
+---
+
+## 💻 Ví dụ thực chiến (Code Example)
+
+Dưới đây là ví dụ minh họa sự kết hợp giữa **Kế thừa** và **Đa hình**:
+
+```java
+// Lớp cha (Parent Class)
+public abstract class Animal {
+    protected String name;
+    
+    public Animal(String name) {
+        this.name = name;
+    }
+    
+    // Phương thức trừu tượng (chưa biết kêu như nào)
+    public abstract void makeSound();
+}
+
+// Lớp con Chó (Dog)
+public class Dog extends Animal {
+    public Dog(String name) {
+        super(name);
+    }
+    
+    @Override
+    public void makeSound() {
+        System.out.println(name + " sủa: Gâu Gâu! 🐕");
+    }
+}
+
+// Lớp con Mèo (Cat)
+public class Cat extends Animal {
+    public Cat(String name) {
+        super(name);
+    }
+    
+    @Override
+    public void makeSound() {
+        System.out.println(name + " kêu: Meow Meow! 🐈");
+    }
+}
+

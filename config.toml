@@ -41,8 +41,10 @@ copyright = "© 2025 Phạm Trần Hưng Bảo"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
   [markup.highlight]
-    # Dùng style 'github' cho chế độ sáng
-    style = "github"
-    # Quan trọng: Đổi thành true để theme tự quản lý class màu sắc
-    noClasses = true
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = "dracula"     # <--- ĐỔI THÀNH CÁI NÀY
+    noClasses = true      # Giữ nguyên dòng này để nó tự tô nền đen

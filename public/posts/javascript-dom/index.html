@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">DOM Manipulation với JavaScript | Phạm Trần Hưng Bảo</title>
+<meta property="og:title" content="DOM Manipulation với JavaScript | Phạm Trần Hưng Bảo" />
+<meta name="twitter:title" content="DOM Manipulation với JavaScript | Phạm Trần Hưng Bảo" />
+<meta itemprop="name" content="DOM Manipulation với JavaScript | Phạm Trần Hưng Bảo" />
+<meta name="application-name" content="DOM Manipulation với JavaScript | Phạm Trần Hưng Bảo" />
+<meta property="og:site_name" content="" />
+
+<meta name="description" content="Chuyên gia phát triển hệ thống với Java &amp; JavaScript.">
+<meta itemprop="description" content="Chuyên gia phát triển hệ thống với Java &amp; JavaScript." />
+<meta property="og:description" content="Chuyên gia phát triển hệ thống với Java &amp; JavaScript." />
+<meta name="twitter:description" content="Chuyên gia phát triển hệ thống với Java &amp; JavaScript." />
+
+<meta property="og:locale" content="vi-VN" />
+<meta name="language" content="vi-VN" />
+
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/posts/javascript-dom/" title="" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2024-12-15T00:00:00Z />
+    <meta property="article:published_time" content=2024-12-15T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/posts/javascript-dom/" />
+
+    
+    <meta property="og:article:author" content="Phạm Trần Hưng Bảo" />
+    <meta property="article:author" content="Phạm Trần Hưng Bảo" />
+    <meta name="author" content="Phạm Trần Hưng Bảo" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "DOM Manipulation với JavaScript",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2024-12-15",
+        "description": "",
+        "wordCount":  110 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2024-12-15",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Phạm Trần Hưng Bảo"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.153.2">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/javascript-dom/">
+  <meta property="og:site_name" content="Phạm Trần Hưng Bảo">
+  <meta property="og:title" content="DOM Manipulation với JavaScript">
+  <meta property="og:description" content="Thao tác DOM với JavaScript DOM (Document Object Model) là giao diện để tương tác với HTML từ JavaScript.
+Chọn phần tử // getElementById const element = document.getElementById(&#39;myId&#39;); // querySelector const element = document.querySelector(&#39;.myClass&#39;); const elements = document.querySelectorAll(&#39;.item&#39;); // getElementByClassName const elements = document.getElementsByClassName(&#39;myClass&#39;); Sửa đổi nội dung const element = document.getElementById(&#39;myId&#39;); // Sửa text element.textContent = &#39;Hello World&#39;; // Sửa HTML element.innerHTML = &#39;&lt;p&gt;New content&lt;/p&gt;&#39;; // Sửa thuộc tính element.setAttribute(&#39;data-value&#39;, &#39;123&#39;); element.style.color = &#39;red&#39;; Event Handling const button = document.getElementById(&#39;myButton&#39;); button.addEventListener(&#39;click&#39;, function() { console.log(&#39;Button clicked!&#39;); }); // Hoặc với arrow function button.addEventListener(&#39;click&#39;, () =&gt; { console.log(&#39;Button clicked!&#39;); }); DOM Manipulation là nền tảng của web development với vanilla JavaScript.">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-15T00:00:00+00:00">
+    <meta property="article:tag" content="JavaScript">
+    <meta property="article:tag" content="DOM">
+    <meta property="article:tag" content="Frontend">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DOM Manipulation với JavaScript">
+  <meta name="twitter:description" content="Thao tác DOM với JavaScript DOM (Document Object Model) là giao diện để tương tác với HTML từ JavaScript.
+Chọn phần tử // getElementById const element = document.getElementById(&#39;myId&#39;); // querySelector const element = document.querySelector(&#39;.myClass&#39;); const elements = document.querySelectorAll(&#39;.item&#39;); // getElementByClassName const elements = document.getElementsByClassName(&#39;myClass&#39;); Sửa đổi nội dung const element = document.getElementById(&#39;myId&#39;); // Sửa text element.textContent = &#39;Hello World&#39;; // Sửa HTML element.innerHTML = &#39;&lt;p&gt;New content&lt;/p&gt;&#39;; // Sửa thuộc tính element.setAttribute(&#39;data-value&#39;, &#39;123&#39;); element.style.color = &#39;red&#39;; Event Handling const button = document.getElementById(&#39;myButton&#39;); button.addEventListener(&#39;click&#39;, function() { console.log(&#39;Button clicked!&#39;); }); // Hoặc với arrow function button.addEventListener(&#39;click&#39;, () =&gt; { console.log(&#39;Button clicked!&#39;); }); DOM Manipulation là nền tảng của web development với vanilla JavaScript.">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/javascript-dom/">
+    <link href="/style.min.e390ba7da26222f4dc42a349955d76dbbe44e5ce2535a43de5a70633a0a9ec3c.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+    <meta name="color-scheme" content="light dark">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+</head>
+
+  <body>
+    <div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/posts/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+    <main class="content" aria-label="Content">
+      <h2 id="thao-tác-dom-với-javascript">Thao tác DOM với JavaScript</h2>
+<p>DOM (Document Object Model) là giao diện để tương tác với HTML từ JavaScript.</p>
+<h3 id="chọn-phần-tử">Chọn phần tử</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#6272a4">// getElementById
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> element <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;myId&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// querySelector
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> element <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.querySelector(<span style="color:#f1fa8c">&#39;.myClass&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> elements <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.querySelectorAll(<span style="color:#f1fa8c">&#39;.item&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// getElementByClassName
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> elements <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementsByClassName(<span style="color:#f1fa8c">&#39;myClass&#39;</span>);
+</span></span></code></pre></div><h3 id="sửa-đổi-nội-dung">Sửa đổi nội dung</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#ff79c6">const</span> element <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;myId&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// Sửa text
+</span></span></span><span style="display:flex;"><span>element.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Hello World&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// Sửa HTML
+</span></span></span><span style="display:flex;"><span>element.innerHTML <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;&lt;p&gt;New content&lt;/p&gt;&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// Sửa thuộc tính
+</span></span></span><span style="display:flex;"><span>element.setAttribute(<span style="color:#f1fa8c">&#39;data-value&#39;</span>, <span style="color:#f1fa8c">&#39;123&#39;</span>);
+</span></span><span style="display:flex;"><span>element.style.color <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;red&#39;</span>;
+</span></span></code></pre></div><h3 id="event-handling">Event Handling</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#ff79c6">const</span> button <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;myButton&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>button.addEventListener(<span style="color:#f1fa8c">&#39;click&#39;</span>, <span style="color:#8be9fd;font-style:italic">function</span>() {
+</span></span><span style="display:flex;"><span>    console.log(<span style="color:#f1fa8c">&#39;Button clicked!&#39;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// Hoặc với arrow function
+</span></span></span><span style="display:flex;"><span>button.addEventListener(<span style="color:#f1fa8c">&#39;click&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>    console.log(<span style="color:#f1fa8c">&#39;Button clicked!&#39;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>DOM Manipulation là nền tảng của web development với vanilla JavaScript.</p>
+
+    </main>
+    <footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+</div>
+    <small class="footer_copyright">
+        © 2025 Phạm Trần Hưng Bảo.
+        
+    </small>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backend on Phạm Trần Hưng Bảo</title>
+    <link>http://localhost:1313/tags/backend/</link>
+    <description>Recent content in Backend on Phạm Trần Hưng Bảo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi-VN</language>
+    <copyright>© 2025 Phạm Trần Hưng Bảo</copyright>
+    <lastBuildDate>Fri, 20 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/backend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lập trình hướng đối tượng (OOP) trong Java - Từ lý thuyết đến thực chiến</title>
+      <link>http://localhost:1313/posts/database-sql/</link>
+      <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/database-sql/</guid>
+      
+      <description>&lt;h2 id=&#34;-giới-thiệu&#34;&gt;🚀 Giới thiệu&lt;/h2&gt;
+&lt;div style=&#34;background-color: #091823ff; padding: 15px; border-left: 5px solid #2196F3; margin-bottom: 20px; border-radius: 4px;&#34;&gt;
+    &lt;strong&gt;💡 Tổng quan:&lt;/strong&gt; Lập trình hướng đối tượng (OOP) không chỉ là viết code, mà là &lt;em&gt;tư duy mô hình hóa&lt;/em&gt; thế giới thực vào trong máy tính. Đây là kỹ năng bắt buộc phải có nếu bạn muốn trở thành Java Developer.
+&lt;/div&gt;
+&lt;p&gt;Trong Java, mọi thứ đều xoay quanh &lt;strong&gt;Class (Lớp)&lt;/strong&gt; và &lt;strong&gt;Object (Đối tượng)&lt;/strong&gt;. Hãy cùng đi sâu vào 4 trụ cột chính đã làm nên sức mạnh của ngôn ngữ này.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Spring Boot - Khởi đầu nhanh</title>
+      <link>http://localhost:1313/posts/spring-boot-basics/</link>
+      <pubDate>Sat, 14 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/spring-boot-basics/</guid>
+      
+      <description>&lt;h2 id=&#34;spring-boot---lập-trình-web-backend-dễ-dàng&#34;&gt;Spring Boot - Lập trình Web Backend dễ dàng&lt;/h2&gt;
+&lt;p&gt;Spring Boot đơn giản hóa việc tạo ứng dụng Spring, giảm boilerplate code.&lt;/p&gt;
+&lt;h3 id=&#34;cấu-trúc-cơ-bản&#34;&gt;Cấu trúc cơ bản&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; org.springframework.boot.SpringApplication;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; org.springframework.boot.autoconfigure.SpringBootApplication;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; org.springframework.web.bind.annotation.GetMapping;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; org.springframework.web.bind.annotation.RestController;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;@SpringBootApplication
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;Application&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;main&lt;/span&gt;(String&lt;span style=&#34;color:#ff79c6&#34;&gt;[]&lt;/span&gt; args) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        SpringApplication.&lt;span style=&#34;color:#50fa7b&#34;&gt;run&lt;/span&gt;(Application.&lt;span style=&#34;color:#50fa7b&#34;&gt;class&lt;/span&gt;, args);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;@RestController
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;HelloController&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    @GetMapping(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;/hello&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#50fa7b&#34;&gt;hello&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;các-tính-năng-chính&#34;&gt;Các tính năng chính&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Auto-configuration&lt;/li&gt;
+&lt;li&gt;Embedded server (Tomcat, Jetty, Undertow)&lt;/li&gt;
+&lt;li&gt;Starter dependencies&lt;/li&gt;
+&lt;li&gt;Actuator cho monitoring&lt;/li&gt;
+&lt;li&gt;Dễ deployment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tạo-project-mới&#34;&gt;Tạo project mới&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mvn archetype:generate -DgroupId&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;com.example -DartifactId&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;my-app
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# Hoặc dùng Spring Boot CLI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;spring boot new --name my-app
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Spring Boot là lựa chọn hàng đầu cho phát triển web backend với Java.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
