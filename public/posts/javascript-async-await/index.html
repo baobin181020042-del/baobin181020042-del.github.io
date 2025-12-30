@@ -169,6 +169,13 @@ stroke-linejoin="round" class="feather feather-home">
                     
                 </li>
                 
+                <li>
+                    <a class="menu-link " href="/portfolio/">
+                        Portfolio
+                    </a>
+                    
+                </li>
+                
                 <li class="menu-separator">
                     <span>|</span>
                 </li>
@@ -190,28 +197,28 @@ stroke-linejoin="round" class="feather feather-home">
 <p>Async/Await là cách hiện đại để xử lý bất đồng bộ trong JavaScript, làm cho code dễ đọc hơn.</p>
 <h3 id="so-sánh-callback-promise-và-asyncawait">So sánh Callback, Promise, và Async/Await</h3>
 <h4 id="callback-hell">Callback Hell</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>fetchUser(id, <span style="color:#8be9fd;font-style:italic">function</span>(user) {
-</span></span><span style="display:flex;"><span>    fetchPosts(user.id, <span style="color:#8be9fd;font-style:italic">function</span>(posts) {
-</span></span><span style="display:flex;"><span>        fetchComments(posts[<span style="color:#bd93f9">0</span>].id, <span style="color:#8be9fd;font-style:italic">function</span>(comments) {
-</span></span><span style="display:flex;"><span>            console.log(comments);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">fetchUser</span>(<span style="color:#a6e22e">id</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">user</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fetchPosts</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">posts</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fetchComments</span>(<span style="color:#a6e22e">posts</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">id</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">comments</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">comments</span>);
 </span></span><span style="display:flex;"><span>        });
 </span></span><span style="display:flex;"><span>    });
 </span></span><span style="display:flex;"><span>});
 </span></span></code></pre></div><h4 id="promise-chain">Promise Chain</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>fetchUser(id)
-</span></span><span style="display:flex;"><span>    .then(user =&gt; fetchPosts(user.id))
-</span></span><span style="display:flex;"><span>    .then(posts =&gt; fetchComments(posts[<span style="color:#bd93f9">0</span>].id))
-</span></span><span style="display:flex;"><span>    .then(comments =&gt; console.log(comments))
-</span></span><span style="display:flex;"><span>    .<span style="color:#ff79c6">catch</span>(error =&gt; console.error(error));
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">fetchUser</span>(<span style="color:#a6e22e">id</span>)
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">user</span> =&gt; <span style="color:#a6e22e">fetchPosts</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>))
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">posts</span> =&gt; <span style="color:#a6e22e">fetchComments</span>(<span style="color:#a6e22e">posts</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">id</span>))
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">comments</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">comments</span>))
+</span></span><span style="display:flex;"><span>    .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">error</span>));
 </span></span></code></pre></div><h4 id="asyncawait">Async/Await</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#ff79c6">async</span> <span style="color:#8be9fd;font-style:italic">function</span> getComments(id) {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">try</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">const</span> user <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> fetchUser(id);
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">const</span> posts <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> fetchPosts(user.id);
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">const</span> comments <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> fetchComments(posts[<span style="color:#bd93f9">0</span>].id);
-</span></span><span style="display:flex;"><span>        console.log(comments);
-</span></span><span style="display:flex;"><span>    } <span style="color:#ff79c6">catch</span> (error) {
-</span></span><span style="display:flex;"><span>        console.error(error);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getComments</span>(<span style="color:#a6e22e">id</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetchUser</span>(<span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">posts</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetchPosts</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">comments</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetchComments</span>(<span style="color:#a6e22e">posts</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">comments</span>);
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">error</span>);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Async/Await làm code trông giống như synchronous nhưng thực tế là bất đồng bộ.</p>

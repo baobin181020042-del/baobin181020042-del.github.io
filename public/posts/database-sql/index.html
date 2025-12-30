@@ -11,10 +11,10 @@
 <meta name="application-name" content="Lập trình hướng đối tượng (OOP) trong Java - Từ lý thuyết đến thực chiến | Phạm Trần Hưng Bảo" />
 <meta property="og:site_name" content="" />
 
-<meta name="description" content="Giải thích chi tiết 4 tính chất của OOP kèm ví dụ minh họa sống động.">
-<meta itemprop="description" content="Giải thích chi tiết 4 tính chất của OOP kèm ví dụ minh họa sống động." />
-<meta property="og:description" content="Giải thích chi tiết 4 tính chất của OOP kèm ví dụ minh họa sống động." />
-<meta name="twitter:description" content="Giải thích chi tiết 4 tính chất của OOP kèm ví dụ minh họa sống động." />
+<meta name="description" content="Phân tích chuyên sâu 4 trụ cột của OOP: Đóng gói, Kế thừa, Đa hình, Trừu tượng và cách áp dụng hiệu quả trong dự án Java.">
+<meta itemprop="description" content="Phân tích chuyên sâu 4 trụ cột của OOP: Đóng gói, Kế thừa, Đa hình, Trừu tượng và cách áp dụng hiệu quả trong dự án Java." />
+<meta property="og:description" content="Phân tích chuyên sâu 4 trụ cột của OOP: Đóng gói, Kế thừa, Đa hình, Trừu tượng và cách áp dụng hiệu quả trong dự án Java." />
+<meta name="twitter:description" content="Phân tích chuyên sâu 4 trụ cột của OOP: Đóng gói, Kế thừa, Đa hình, Trừu tượng và cách áp dụng hiệu quả trong dự án Java." />
 
 <meta property="og:locale" content="vi-VN" />
 <meta name="language" content="vi-VN" />
@@ -53,8 +53,8 @@
         "name": ""
         },
         "datePublished": "2024-12-20",
-        "description": "Giải thích chi tiết 4 tính chất của OOP kèm ví dụ minh họa sống động.",
-        "wordCount":  429 ,
+        "description": "Phân tích chuyên sâu 4 trụ cột của OOP: Đóng gói, Kế thừa, Đa hình, Trừu tượng và cách áp dụng hiệu quả trong dự án Java.",
+        "wordCount":  1002 ,
         "mainEntityOfPage": "True",
         "dateModified": "2024-12-20",
         "image": {
@@ -75,7 +75,7 @@
     <meta property="og:url" content="http://localhost:1313/posts/database-sql/">
   <meta property="og:site_name" content="Phạm Trần Hưng Bảo">
   <meta property="og:title" content="Lập trình hướng đối tượng (OOP) trong Java - Từ lý thuyết đến thực chiến">
-  <meta property="og:description" content="Giải thích chi tiết 4 tính chất của OOP kèm ví dụ minh họa sống động.">
+  <meta property="og:description" content="Phân tích chuyên sâu 4 trụ cột của OOP: Đóng gói, Kế thừa, Đa hình, Trừu tượng và cách áp dụng hiệu quả trong dự án Java.">
   <meta property="og:locale" content="vi_VN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -91,7 +91,7 @@
     
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Lập trình hướng đối tượng (OOP) trong Java - Từ lý thuyết đến thực chiến">
-  <meta name="twitter:description" content="Giải thích chi tiết 4 tính chất của OOP kèm ví dụ minh họa sống động.">
+  <meta name="twitter:description" content="Phân tích chuyên sâu 4 trụ cột của OOP: Đóng gói, Kế thừa, Đa hình, Trừu tượng và cách áp dụng hiệu quả trong dự án Java.">
 
 
     
@@ -168,6 +168,13 @@ stroke-linejoin="round" class="feather feather-home">
                     
                 </li>
                 
+                <li>
+                    <a class="menu-link " href="/portfolio/">
+                        Portfolio
+                    </a>
+                    
+                </li>
+                
                 <li class="menu-separator">
                     <span>|</span>
                 </li>
@@ -186,71 +193,153 @@ stroke-linejoin="round" class="feather feather-home">
 
     <main class="content" aria-label="Content">
       <h2 id="-giới-thiệu">🚀 Giới thiệu</h2>
-<div style="background-color: #091823ff; padding: 15px; border-left: 5px solid #2196F3; margin-bottom: 20px; border-radius: 4px;">
-    <strong>💡 Tổng quan:</strong> Lập trình hướng đối tượng (OOP) không chỉ là viết code, mà là <em>tư duy mô hình hóa</em> thế giới thực vào trong máy tính. Đây là kỹ năng bắt buộc phải có nếu bạn muốn trở thành Java Developer.
+<div style="background-color: #1e1e1e; padding: 15px; border-left: 5px solid #2196F3; margin-bottom: 20px; border-radius: 4px; color: #e0e0e0;">
+'''
+    <strong>💡 Tổng quan:</strong> Lập trình hướng đối tượng (OOP - Object Oriented Programming) không chỉ là viết code, mà là <em>tư duy mô hình hóa</em> thế giới thực vào trong máy tính. Thay vì viết một danh sách các lệnh chạy từ trên xuống dưới (Lập trình thủ tục), OOP giúp chúng ta chia nhỏ phần mềm thành các <strong>Đối tượng (Objects)</strong> tương tác với nhau.
 </div>
-<p>Trong Java, mọi thứ đều xoay quanh <strong>Class (Lớp)</strong> và <strong>Object (Đối tượng)</strong>. Hãy cùng đi sâu vào 4 trụ cột chính đã làm nên sức mạnh của ngôn ngữ này.</p>
+<p>Trong Java, mọi thứ đều xoay quanh <strong>Class (Lớp)</strong> và <strong>Object (Đối tượng)</strong>. Nếu coi <strong>Class</strong> là bản thiết kế (Blueprint), thì <strong>Object</strong> chính là ngôi nhà được xây dựng từ bản vẽ đó.</p>
+<p>Hãy cùng đi sâu vào 4 trụ cột chính (The 4 Pillars) đã làm nên sức mạnh của ngôn ngữ này và lý do tại sao mọi Java Developer đều phải nắm vững chúng.</p>
 <hr>
-<h2 id="1-bốn-trụ-cột-của-oop-the-4-pillars">1. Bốn trụ cột của OOP (The 4 Pillars)</h2>
-<p>Để dễ nhớ, chúng ta hãy hình dung OOP giống như việc lắp ráp một chiếc xe hơi:</p>
-<h3 id="-1-encapsulation-tính-đóng-gói">🛡️ 1. Encapsulation (Tính Đóng gói)</h3>
-<p>Đóng gói giống như việc <strong>động cơ xe được che chắn dưới nắp capo</strong>. Người lái xe không cần biết động cơ hoạt động thế nào, chỉ cần biết đạp ga là chạy.</p>
+<h2 id="1-encapsulation-tính-đóng-gói---chiếc-két-sắt-an-toàn">1. Encapsulation (Tính Đóng gói) - Chiếc két sắt an toàn</h2>
+<p>Đóng gói là kỹ thuật che giấu thông tin và ngăn chặn việc truy cập trái phép vào các chi tiết nội bộ của một đối tượng.</p>
+<h3 id="-tại-sao-cần-đóng-gói">🛡️ Tại sao cần Đóng gói?</h3>
+<p>Hãy tưởng tượng tài khoản ngân hàng của bạn. Nếu ai cũng có thể truy cập trực tiếp vào biến <code>soDu</code> (số dư) và sửa nó thành 0, thì thật thảm họa. Đóng gói buộc mọi người phải đi qua các &ldquo;cửa kiểm soát&rdquo; (hàm) để thay đổi dữ liệu.</p>
 <ul>
-<li><strong>Mục đích:</strong> Che giấu dữ liệu quan trọng, tránh bị thay đổi lung tung từ bên ngoài.</li>
-<li><strong>Cách dùng:</strong> Sử dụng từ khóa <code>private</code> và cung cấp <code>Getter/Setter</code>.</li>
+<li>
+<p><strong>Dữ liệu (Variables):</strong> Được khai báo là <code>private</code> để ẩn đi.</p>
+</li>
+<li>
+<p><strong>Cửa kiểm soát (Methods):</strong> Sử dụng <code>public Getter/Setter</code> để truy cập và kiểm tra tính hợp lệ.</p>
+</li>
 </ul>
-<h3 id="-2-inheritance-tính-kế-thừa">🧬 2. Inheritance (Tính Kế thừa)</h3>
-<p>Giống như việc <strong>Xe Thể Thao</strong> kế thừa các đặc điểm của <strong>Xe Ô tô</strong> (có 4 bánh, có vô lăng) nhưng nâng cấp thêm động cơ mạnh hơn.</p>
-<ul>
-<li><strong>Mục đích:</strong> Tái sử dụng code, tránh viết lặp lại.</li>
-<li><strong>Từ khóa:</strong> <code>extends</code>.</li>
-</ul>
-<h3 id="-3-polymorphism-tính-đa-hình">🎭 3. Polymorphism (Tính Đa hình)</h3>
-<p>Cùng là hành động &ldquo;bấm còi&rdquo;, nhưng <strong>xe máy kêu &ldquo;bíp bíp&rdquo;</strong>, còn <strong>xe tải kêu &ldquo;hú còi&rdquo;</strong>. Cùng một hành động nhưng cách thực hiện khác nhau.</p>
-<ul>
-<li><strong>Mục đích:</strong> Linh hoạt trong việc xử lý đối tượng.</li>
-</ul>
-<h3 id="-4-abstraction-tính-trừu-tượng">👻 4. Abstraction (Tính Trừu tượng)</h3>
-<p>Bạn chỉ quan tâm đến cái <strong>Vô lăng</strong> (Giao diện) để lái xe, không cần quan tâm trục lái bên trong kết nối ra sao.</p>
-<ul>
-<li><strong>Mục đích:</strong> Tập trung vào cái người dùng cần, ẩn đi sự phức tạp.</li>
-</ul>
-<hr>
-<h2 id="-ví-dụ-thực-chiến-code-example">💻 Ví dụ thực chiến (Code Example)</h2>
-<p>Dưới đây là ví dụ minh họa sự kết hợp giữa <strong>Kế thừa</strong> và <strong>Đa hình</strong>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#6272a4">// Lớp cha (Parent Class)</span>
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Animal</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">protected</span> String name;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BankAccount</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 1. Dữ liệu bị ẩn đi (Private)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> balance;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 2. Phương thức công khai để nạp tiền (kiểm soát dữ liệu đầu vào)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deposit</span>(<span style="color:#66d9ef">double</span> amount) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (amount <span style="color:#f92672">&gt;</span> 0) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">balance</span> <span style="color:#f92672">+=</span> amount;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Đã nạp: &#34;</span> <span style="color:#f92672">+</span> amount);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Số tiền nạp không hợp lệ!&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 3. Getter để xem số dư (chỉ xem, không sửa trực tiếp được)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">getBalance</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> balance;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="2">
+<li>Inheritance (Tính Kế thừa) - &ldquo;Cha truyền con nối&rdquo;</li>
+</ol>
+<p>Kế thừa cho phép một lớp con (Subclass) sở hữu các thuộc tính và phương thức của lớp cha (Superclass).</p>
+<p>🧬 Lợi ích cốt lõi</p>
+<p>Giống như việc Xe Thể Thao kế thừa các đặc điểm của Xe Ô tô (có 4 bánh, có vô lăng, có động cơ) nhưng được nâng cấp thêm tốc độ.</p>
+<p>Tái sử dụng mã nguồn (Code Reusability): Viết một lần ở lớp cha, dùng lại ở nhiều lớp con.</p>
+<p>Dễ bảo trì: Khi sửa logic ở lớp cha, toàn bộ lớp con đều được cập nhật.</p>
+<p>Từ khóa: Sử dụng extends.</p>
+<p>⚠️ Lưu ý: Trong Java, một lớp chỉ có thể kế thừa từ một lớp cha duy nhất (Single Inheritance) để tránh xung đột dữ liệu (Diamond Problem).</p>
+<ol start="3">
+<li>Polymorphism (Tính Đa hình) - &ldquo;Một tên gọi, nhiều hình thái&rdquo;</li>
+</ol>
+<p>Đa hình cho phép chúng ta thực hiện một hành động duy nhất theo nhiều cách khác nhau. Đây là tính chất giúp code Java trở nên linh hoạt và dễ mở rộng.</p>
+<p>🎭 Hai loại Đa hình trong Java</p>
+<p>A. Đa hình lúc biên dịch (Compile-time): Overloading</p>
+<p>Cùng tên hàm nhưng khác tham số.</p>
+<p>Ví dụ: Hàm tinhTong(int a, int b) và hàm tinhTong(int a, int b, int c).</p>
+<p>B. Đa hình lúc chạy (Runtime): Overriding</p>
+<p>Lớp con viết lại (ghi đè) phương thức của lớp cha để hoạt động theo cách riêng.</p>
+<p>Ví dụ: Cùng là hành động makeSound() (phát ra tiếng), nhưng Chó sủa &ldquo;Gâu&rdquo;, Mèo kêu &ldquo;Meow&rdquo;.</p>
+<ol start="4">
+<li>Abstraction (Tính Trừu tượng) - Ẩn đi sự phức tạp</li>
+</ol>
+<p>Trừu tượng hóa là việc chỉ hiển thị những tính năng thiết yếu cho người dùng và ẩn đi các chi tiết thực thi phức tạp bên dưới.</p>
+<p>👻 Ví dụ thực tế</p>
+<p>Khi lái xe ô tô, bạn chỉ quan tâm đến cái Vô lăng, Chân ga, Chân phanh (Giao diện). Bạn không cần biết (và không nên biết) hệ thống phun xăng điện tử hay trục cam bên trong động cơ hoạt động chi tiết ra sao.</p>
+<p>Trong Java, chúng ta thực hiện điều này thông qua:</p>
+<p>Abstract Class: Lớp trừu tượng (có thể chứa hàm có code và hàm rỗng).</p>
+<p>Interface: Bản thiết kế hoàn toàn trừu tượng (chỉ chứa tên hàm, không có code logic).</p>
+<h2 id="-ví-dụ-thực-chiến-tổng-hợp-full-code">💻 Ví dụ thực chiến tổng hợp (Full Code)</h2>
+<p>Dưới đây là ví dụ minh họa sự kết hợp hoàn hảo giữa <strong>Kế thừa</strong>, <strong>Đa hình</strong> và <strong>Trừu tượng</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// 1. ABSTRACT CLASS (Tính Trừu tượng)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Đây là khuôn mẫu chung cho mọi con vật</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> String name; <span style="color:#75715e">// Protected để lớp con có thể truy cập</span>
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Animal</span>(String name) {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">this</span>.<span style="color:#50fa7b">name</span> <span style="color:#ff79c6">=</span> name;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Animal</span>(String name) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Phương thức trừu tượng (chưa biết kêu như nào)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">makeSound</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Phương thức trừu tượng: Bắt buộc con cháu phải tự định nghĩa</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">makeSound</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Phương thức thường: Dùng chung cho tất cả</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sleep</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; đang ngủ... Zzz&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">// Lớp con Chó (Dog)</span>
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Dog</span> <span style="color:#8be9fd;font-style:italic">extends</span> Animal {
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Dog</span>(String name) {
-</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span>(name);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. INHERITANCE (Tính Kế thừa)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lớp Chó kế thừa từ Animal</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> <span style="color:#66d9ef">extends</span> Animal {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Dog</span>(String name) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>(name); <span style="color:#75715e">// Gọi constructor của lớp cha</span>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    @Override
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">makeSound</span>() {
-</span></span><span style="display:flex;"><span>        System.<span style="color:#50fa7b">out</span>.<span style="color:#50fa7b">println</span>(name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34; sủa: Gâu Gâu! 🐕&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 3. POLYMORPHISM (Tính Đa hình - Overriding)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Chó thực hiện hành động kêu theo cách riêng</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">makeSound</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; sủa: Gâu Gâu! 🐕&#34;</span>);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">// Lớp con Mèo (Cat)</span>
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Cat</span> <span style="color:#8be9fd;font-style:italic">extends</span> Animal {
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#50fa7b">Cat</span>(String name) {
-</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span>(name);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lớp Mèo kế thừa từ Animal</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cat</span> <span style="color:#66d9ef">extends</span> Animal {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Cat</span>(String name) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>(name);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    @Override
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd">void</span> <span style="color:#50fa7b">makeSound</span>() {
-</span></span><span style="display:flex;"><span>        System.<span style="color:#50fa7b">out</span>.<span style="color:#50fa7b">println</span>(name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34; kêu: Meow Meow! 🐈&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">makeSound</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; kêu: Meow Meow! 🐈&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// CLASS MAIN ĐỂ CHẠY CHƯƠNG TRÌNH</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Khởi tạo đối tượng (Object)</span>
+</span></span><span style="display:flex;"><span>        Animal myDog <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog(<span style="color:#e6db74">&#34;Cậu Vàng&#34;</span>);
+</span></span><span style="display:flex;"><span>        Animal myCat <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Cat(<span style="color:#e6db74">&#34;Tom&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Kiểm thử đa hình</span>
+</span></span><span style="display:flex;"><span>        myDog.<span style="color:#a6e22e">makeSound</span>(); <span style="color:#75715e">// Output: Cậu Vàng sủa: Gâu Gâu!</span>
+</span></span><span style="display:flex;"><span>        myCat.<span style="color:#a6e22e">makeSound</span>(); <span style="color:#75715e">// Output: Tom kêu: Meow Meow!</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Kiểm thử phương thức kế thừa</span>
+</span></span><span style="display:flex;"><span>        myDog.<span style="color:#a6e22e">sleep</span>();     <span style="color:#75715e">// Output: Cậu Vàng đang ngủ... Zzz</span>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div>

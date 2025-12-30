@@ -37,14 +37,14 @@ copyright = "© 2025 Phạm Trần Hưng Bảo"
     url = "/about/"
     weight = 3
 
+  # --- PHẦN MỚI THÊM VÀO ---
+[[menu.main]]
+    identifier = "portfolio"
+    name = "Portfolio"   # Tên hiển thị trên menu
+    url = "/portfolio/"  # Đường dẫn tới trang mới
+    weight = 4
+    # --- 4. CHO PHÉP CHẠY HTML (BẮT BUỘC) ---
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe = true
-
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    lineNos = false
-    style = "dracula"     # <--- ĐỔI THÀNH CÁI NÀY
-    noClasses = true      # Giữ nguyên dòng này để nó tự tô nền đen
+      unsafe = true  # Dòng quan trọng nhất để hiện ảnh và khung
